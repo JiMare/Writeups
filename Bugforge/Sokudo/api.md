@@ -1,7 +1,7 @@
 # Sokudo - Hidden Endpoint
 
 ## API Versioning
-After registering and logging in, I started testing the application's functionality and inspecting the captured requests in Burp Suite. One thing that immediately caught my attention was the API versioning.. 
+After registering and logging in, I started testing the application's functionality and inspecting the captured requests in Burp Suite. One thing that immediately caught my attention was the API versioning. 
 
 ![](image.png)
 
@@ -17,7 +17,7 @@ While reviewing the components, I quickly discovered an admin panel. Inside the 
 ![alt text](image-1.png)
 
 ## Becoming an Admin
-So immediately attempted to access the endpoint directly, but as expected, the server responded with `403 Forbidden` and the message: *Admin access required*. This behavior was identical for both API versions.
+So I immediately attempted to access the endpoint directly, but as expected, the server responded with `403 Forbidden` and the message: *Admin access required*. This behavior was identical for both API versions.
 
 At this point, I focused on understanding how authentication and authorization were implemented. The application used JWT tokens containing a role claim. My account only had the user role.
 
